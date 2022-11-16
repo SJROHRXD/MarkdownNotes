@@ -3,6 +3,7 @@ import { Form, Stack, Col, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import CreatableReactSelect from "react-select/creatable";
 import { NoteData, Tag } from "./App";
+import { v4 as uuidV4 } from "uuid";
 
 type NoteFormProps = {
     onSubmit: (note: NoteData) => void;
@@ -38,7 +39,12 @@ export function NoteForm({ onSubmit }: NoteFormProps) {
                     <Col>
                         <Form.Group controlId = "tags">
                             <Form.Label>Tags</Form.Label>
-                            <CreatableReactSelect 
+                            <CreatableReactSelect
+                                onCreateOption={label => {
+                                    const newTag = {id:uuidV4(), label}
+                                    onAddTag(newTag)
+                                    setSelectedTags(prev => [...prev, newTag])
+                                }} 
                                 value = {selectedTags.map(tag => {
                                     return {label: tag.label, value: tag.id}
                                 })}
