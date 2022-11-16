@@ -55,18 +55,25 @@ function App() {
         <Routes>
           <Route>
             <Route path = "/" element = { <h1>Home</h1> } />
-            <Route path = "/new" element = { <NewNote /> } />
-
+            <Route path = "/new" element = { <NewNote onSubmit={onCreateNote} /> } />
             <Route path = "/:id">
               <Route index element = { <h1>Show</h1> } />
               <Route path = "edit" element = { <h1>Edit</h1> } />
             </Route>
-
             <Route path = "*" element = {<Navigate to = "/" />} />
           </Route>
         </Routes>
     </Container>
   );
 };
+
+// Container is a component that allows us to define a container
+// Routes is a component that allows us to define a set of routes
+// Route is a component that allows us to define a single route
+// Navigate is a component that allows us to redirect to another route
+// element is a prop that allows us to define the component that will be rendered when the route is matched
+// path is a prop that allows us to define the path that will be matched
+// index is a prop that allows us to define the route that will be matched when the path is empty
+
 
 export default App
