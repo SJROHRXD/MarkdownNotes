@@ -63,7 +63,7 @@ function App() {
   return (
     <Container className = "my-4"> 
       <Routes>
-        <Route path = "/" element = { <NoteList availableTags={tags} /> } />            
+        <Route path = "/" element = { <NoteList notes={notesWithTags} availableTags={tags} /> } />            
         <Route 
           path = "/new"
           element = { 
@@ -91,6 +91,7 @@ function App() {
 // element is a prop that allows us to define the component that will be rendered when the route is matched
 // path is a prop that allows us to define the path that will be matched
 // index is a prop that allows us to define the route that will be matched when the path is empty
+// notesWithTags is a variable that is defined using useMemo
 
 
 export default App

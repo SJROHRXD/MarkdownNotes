@@ -1,12 +1,19 @@
 import { useState, useMemo } from "react";
-import { Row, Col, Stack, Button, Form } from "react-bootstrap";
+import { Row, Col, Stack, Button, Form, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ReactSelect from "react-select";
-import { Tag, Note } from "./App";
+import { Tag } from "./App";
+import styles from "./noteList.module.css";
+
+type SimplifiedNote = {
+    tags: Tag[];
+    title: string;
+    id: string;
+};
 
 type NoteListProps = {
     availableTags: Tag[];
-    notes: Note[];
+    notes: SimplifiedNote[];
 };
 
 export function NoteList({ availableTags, notes }: NoteListProps) {
@@ -25,6 +32,9 @@ export function NoteList({ availableTags, notes }: NoteListProps) {
             );
         });
     }, [title, selectedTags, notes]);
+
+// filteredNotes is an array of notes that have been filtered by the title and selectedTags
+// loop through all selected tags, check if the note has the selected tag, and if it does, return true
 
     return <>
         <Row className = "align-items-center mb-4">
@@ -70,9 +80,17 @@ export function NoteList({ availableTags, notes }: NoteListProps) {
         <Row xs={1} sm={2} lg={3} xl={4} className = "g-3">
             {filteredNotes.map(note => (
                 <Col key = {note.id}>
-                    <NoteCard />
+                    <NoteCard id = {note.id} title = {note.title} tags = {note.tags} />
                 </Col>
             ))}
         </Row>
     </>
 };
+
+function NoteCard({ id, title, tags }: SimplifiedNote) {
+    return <Card as={Link} to={`/${id}`} className={`h-100 text-reset text-decoration-none ${styles.card}`}>
+        <Card.Body>
+
+        </Card.Body>
+    </Card>
+}
