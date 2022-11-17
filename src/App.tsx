@@ -2,9 +2,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useMemo } from "react";
 import { Container } from "react-bootstrap";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { NewNote } from "./NewNote";
-import { useLocalStorage } from "./useLocalStorage";
 import { v4 as uuidV4 } from "uuid";
+
+import { useLocalStorage } from "./useLocalStorage";
+import { NewNote } from "./NewNote";
+import { NoteList } from "./NoteList";
+
+// types are used to define the shape of an object
+// type aliases are used to give a name to a type
+// exporting a type allows us to use it in other files
 
 export type Note = {
   id: string;
@@ -38,7 +44,7 @@ function App() {
   const notesWithTags = useMemo(() => {
     return notes.map(note => {
       return { ...note, tags: tags.filter(tag => note.tagIds.includes(tag.id))}
-    })
+    });
   }, [notes, tags]);
 
   function onCreateNote({ tags, ...data }: NoteData) {
@@ -47,7 +53,7 @@ function App() {
         ...prevNotes, 
           {...data, id: uuidV4(), tagIds: tags.map(tag => tag.id) },
         ];
-    })
+    });
   };
 
   function addTag(tag: Tag) {
@@ -55,7 +61,7 @@ function App() {
   };
 
   return (
-    <Container className="my-4"> 
+    <Container className = "my-4"> 
       <Routes>
         <Route path = "/" element = { <NoteList /> } />            
         <Route 
@@ -72,7 +78,7 @@ function App() {
           <Route index element = { <h1>Show</h1> } />
           <Route path = "edit" element = { <h1>Edit</h1> } />
         </Route>
-        <Route path = "*" element = {<Navigate to = "/" />} />        
+        <Route path = "*" element = { <Navigate to = "/" /> } />        
       </Routes>
     </Container>
   );
