@@ -1,9 +1,10 @@
 import { useState, useMemo } from "react";
-import { Row, Col, Stack, Button, Form, Card, Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ReactSelect from "react-select";
-import { Tag } from "./App";
+import { Row, Col, Stack, Button, Form, Card, Badge } from "react-bootstrap";
 import styles from "./noteList.module.css";
+
+import { Tag } from "./App";
 
 type SimplifiedNote = {
     tags: Tag[];
@@ -33,8 +34,15 @@ export function NoteList({ availableTags, notes }: NoteListProps) {
         });
     }, [title, selectedTags, notes]);
 
-// filteredNotes is an array of notes that have been filtered by the title and selectedTags
-// loop through all selected tags, check if the note has the selected tag, and if it does, return true
+    // useMemo is used to prevent the filteredNotes array from being recreated
+    // useMemo returns a memoized value that is stored in the filteredNotes variable
+    // useMemo is a hook that only runs when the title, selectedTags, or notes variables change (its dependencies update)
+    // *can be used to keep expensive, resource intensive functions from needlessly running
+
+    // NoteList is a function that takes in availableTags and notes as props and returns a NoteList component
+
+    // filteredNotes is an array of notes that have been filtered by the title and selectedTags
+    // *loop through all selected tags, check if the note has the selected tag, and if it does, return true
 
     return <>
         <Row className = "align-items-center mb-4">
@@ -87,15 +95,21 @@ export function NoteList({ availableTags, notes }: NoteListProps) {
     </>
 };
 
+// ReactSelect is a component that allows the user to select tags from a dropdown menu
+// ReactSelect value is set to the selectedTags array
+// ReactSelect options are set to the availableTags array
+// ReactSelect onChange is set to setSelectedTags
+// isMulti allows the user to select multiple tags
+
 function NoteCard({ id, title, tags }: SimplifiedNote) {
     return <Card as={Link} to={`/${id}`} className={`h-100 text-reset text-decoration-none ${styles.card}`}>
         <Card.Body>
-            <Stack gap={2} className="align-items-center justify-content-center h-100">
-                <span className="fs-5">{title}</span>
+            <Stack gap={2} className = "align-items-center justify-content-center h-100">
+                <span className = "fs-5">{title}</span>
                 {tags.length > 0 && (
-                    <Stack gap={1} direction="horizontal" className="justify-content-center flex-wrap">
+                    <Stack gap={1} direction = "horizontal" className = "justify-content-center flex-wrap">
                         {tags.map(tag => (
-                            <Badge className="text-truncate" key={tag.id}>
+                            <Badge className = "text-truncate" key = {tag.id}>
                                 {tag.label}
                             </Badge>
                         ))}
@@ -105,3 +119,10 @@ function NoteCard({ id, title, tags }: SimplifiedNote) {
         </Card.Body>
     </Card>
 };
+
+// NoteCard is a function that takes in id, title, and tags as props and returns a NoteCard component
+// NoteCard is a child component of NoteList
+// *if there are tags, map through the tags and return a Badge component for each tag
+
+// The key prop is used to uniquely identify each element in the array, tag.id is used as the key prop
+// tag.label is used as the text for the Badge component
