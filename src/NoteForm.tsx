@@ -1,6 +1,7 @@
 import { useState, FormEvent, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Form, Stack, Col, Row, Button } from "react-bootstrap";
+import styles from "./noteForm.module.css";
 import CreatableReactSelect from "react-select/creatable";
 import { v4 as uuidV4 } from "uuid";
 import { NoteData, Tag } from "./App";
@@ -75,10 +76,12 @@ export function NoteForm({
                     <Form.Group controlId = "markdown">
                         <Form.Label>Body</Form.Label>
                         <Form.Control
+                            className = {`${styles.formControl}`}
                             defaultValue = { markdown }
                             required as = "textarea"
                             ref = { markdownRef }
                             rows = {15}
+                            placeholder = "# Markdown Here"
                         />
                     </Form.Group>
                     <Stack direction = "horizontal" gap = {2} className = " justify-content-end">
