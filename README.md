@@ -1,5 +1,7 @@
 # Markdown Notes 🌷 #
 
+<img src="image.png" width="200" >
+
 ## Table of Contents
 
 - [Description](#Description-)
