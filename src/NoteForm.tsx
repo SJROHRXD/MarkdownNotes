@@ -1,4 +1,4 @@
-import { useState, FormEvent, useRef } from 'react';
+import { useState, FormEvent, useRef } from "react";
 import { Form, Stack, Col, Row, Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import CreatableReactSelect from "react-select/creatable";
@@ -43,7 +43,7 @@ export function NoteForm({ onSubmit, onAddTag, availableTags }: NoteFormProps) {
                         <Form.Group controlId = "tags">
                             <Form.Label>Tags</Form.Label>
                             <CreatableReactSelect
-                                onCreateOption={label => {
+                                onCreateOption = {label => {
                                     const newTag = {id:uuidV4(), label}
                                     onAddTag(newTag)
                                     setSelectedTags(prev => [...prev, newTag])
@@ -51,7 +51,7 @@ export function NoteForm({ onSubmit, onAddTag, availableTags }: NoteFormProps) {
                                 value = {selectedTags.map(tag => {
                                     return {label: tag.label, value: tag.id}
                                 })}
-                                options={availableTags.map(tag => {
+                                options = {availableTags.map(tag => {
                                     return { label: tag.label, value: tag.id }
                                 })}
                                 onChange = {tags => {
@@ -81,3 +81,21 @@ export function NoteForm({ onSubmit, onAddTag, availableTags }: NoteFormProps) {
         </Form>
     );
 };
+
+// React Bootstrap 🌙
+// Form.Control is a component that renders a form control
+// Form.Group is a component that wraps a form control and its label
+// Form.Label is a component that renders a label for a form control
+// controlId is a prop that associates a form control with its label
+
+// Stack is a component that renders its children in a vertical stack
+// Button is a component that renders a button, and its variant prop determines its style
+// Row is a component that renders its children in a horizontal row
+// Col is a component that renders its children in a column
+
+// React Router ⭐
+// Link is a component that renders a link to another page
+// useNavigate is a hook that returns a function that navigates to another page
+
+// React Select 🪐
+// CreatableReactSelect is a component that renders a select control that allows users to create new options
