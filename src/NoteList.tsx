@@ -92,7 +92,7 @@ export function NoteList({
                 <Row className = "mb-4">
                     <Col>
                         <Form.Group controlId = "title">
-                            <Form.Label>Title</Form.Label>
+                            <Form.Label>Search Title</Form.Label>
                             <Form.Control
                                 type = "text" 
                                 value = {title} 
@@ -102,7 +102,7 @@ export function NoteList({
                     </Col>
                     <Col>
                         <Form.Group controlId = "tags">
-                            <Form.Label>Tags</Form.Label>
+                            <Form.Label>Search Tags</Form.Label>
                             <ReactSelect
                                 value = {selectedTags.map(tag => {
                                     return {label: tag.label, value: tag.id}
