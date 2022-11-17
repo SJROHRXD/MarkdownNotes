@@ -69,26 +69,28 @@ export function NoteForm({
                                 isMulti />
                         </Form.Group>
                     </Col>
-                    <Col>
-                        <Form.Group controlId = "markdown">
-                            <Form.Label>Body</Form.Label>
-                            <Form.Control
-                                defaultValue = { markdown }
-                                required as = "textarea"
-                                ref = { markdownRef }
-                                rows = {15}
-                            />
-                        </Form.Group>
-                        <Stack direction = "horizontal" gap = {2} className = "justify-content-end">
-                            <Button type = "submit">Save</Button>
-                            <Link to = "..">
-                                <Button type = "button" variant = "outline-secondary">
-                                    Cancel
-                                </Button>
-                            </Link>
-                        </Stack>
-                    </Col>
                 </Row>
+
+                <Row>
+                    <Form.Group controlId = "markdown">
+                        <Form.Label>Body</Form.Label>
+                        <Form.Control
+                            defaultValue = { markdown }
+                            required as = "textarea"
+                            ref = { markdownRef }
+                            rows = {15}
+                        />
+                    </Form.Group>
+                    <Stack direction = "horizontal" gap = {2} className = " justify-content-end">
+                        <Button type = "submit">Save</Button>
+                        <Link to = "..">
+                            <Button type = "button" variant = "outline-secondary">
+                                Cancel
+                            </Button>
+                        </Link>
+                    </Stack>
+                </Row>
+
             </Stack>
         </Form>
     );
