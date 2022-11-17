@@ -32,7 +32,7 @@ export function NoteForm({ onSubmit, onAddTag, availableTags }: NoteFormProps) {
 
     return ( 
         <Form onSubmit = {handleSubmit}>
-            <Stack gap={4}>
+            <Stack gap = {4}>
                 <Row>
                     <Col>
                         <Form.Group controlId = "title">
@@ -66,9 +66,9 @@ export function NoteForm({ onSubmit, onAddTag, availableTags }: NoteFormProps) {
                     <Col>
                         <Form.Group controlId = "markdown">
                             <Form.Label>Body</Form.Label>
-                            <Form.Control required as = "textarea" ref = { markdownRef } rows={15} />
+                            <Form.Control required as = "textarea" ref = { markdownRef } rows = {15} />
                         </Form.Group>
-                        <Stack direction = "horizontal" gap={2} className = "justify-content-end">
+                        <Stack direction = "horizontal" gap = {2} className = "justify-content-end">
                             <Button type = "submit">Save</Button>
                             <Link to = "..">
                                 <Button type = "button" variant = "outline-secondary">
