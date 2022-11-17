@@ -37,7 +37,7 @@ From [Web Dev Simplified - YouTube](https://youtu.be/j898RGRw0b4) || [Web Dev Si
 
 [Vite](https://vitejs.dev/guide/)
 
-// [✨Return to Top](#Table-of-Contents-) //
+// [✨Return to Top](#Table-of-Contents) //
 
 ## Licensing 🍒
 
@@ -57,4 +57,4 @@ To Update:
 5. Stylize
 6. Modularize
 
-// [✨Return to Top](#Table-of-Contents-) //
+// [✨Return to Top](#Table-of-Contents) //
