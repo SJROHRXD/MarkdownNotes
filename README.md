@@ -19,11 +19,20 @@ From [Web Dev Simplified - YouTube](https://youtu.be/j898RGRw0b4) || [Web Dev Si
 
 ## Installation 🍅
 
+    git clone https://github.com/SJROHRXD/MarkdownNotes.git
     npm i
+    npm run dev
 
 ## Usage 🍉
 
-    npm run dev
+- navigate to hosted site
+- *Search* by Title or Tags
+- *Create* a new Note
+- enter Title, enter Tag(s)
+- the *Body* supports Markdown
+- *Save* your Note
+- *Edit* your Note or Tags
+- Tags can be emojis 🧷
 
 ## Tech 🍓
 
@@ -50,11 +59,12 @@ Refer to ✨ [this](https://github.com/WebDevSimplified/react-note-taking-app/bl
 ## FUTURE 🚀
 
 To Update:
-1. Add ~ banner ~ or idk something for "Notes" header
-2. Preview body in cards
-3. "Delete" warning?
-4. Make note creation more intuitive
-5. Stylize
-6. Modularize
+- [x] Fix weird squishy buttons under body
+- [ ] Add ~ banner ~ or idk something for "Notes" header
+- [ ] Preview body in cards
+- [ ] "Delete" warning?
+- [ ] Make note creation more intuitive
+- [ ] Stylize
+- [ ] Modularize
 
 // [✨Return to Top](#Table-of-Contents) //
