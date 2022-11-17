@@ -48,7 +48,7 @@ export function NoteList({ availableTags, notes }: NoteListProps) {
         <Row className = "align-items-center mb-4">
             <Col><h1>Notes</h1></Col>
             <Col xs = "auto">
-                <Stack gap ={2} direction = "horizontal">
+                <Stack gap = {2} direction = "horizontal">
                     <Link to = "/new">
                         <Button variant = "primary">Create</Button>
                     </Link>
@@ -85,7 +85,7 @@ export function NoteList({ availableTags, notes }: NoteListProps) {
                 </Col>
             </Row>
         </Form>
-        <Row xs={1} sm={2} lg={3} xl={4} className = "g-3">
+        <Row xs = {1} sm = {2} lg = {3} xl = {4} className = "g-3">
             {filteredNotes.map(note => (
                 <Col key = {note.id}>
                     <NoteCard id = {note.id} title = {note.title} tags = {note.tags} />
@@ -102,12 +102,12 @@ export function NoteList({ availableTags, notes }: NoteListProps) {
 // isMulti allows the user to select multiple tags
 
 function NoteCard({ id, title, tags }: SimplifiedNote) {
-    return <Card as={Link} to={`/${id}`} className={`h-100 text-reset text-decoration-none ${styles.card}`}>
+    return <Card as = {Link} to = {`/${id}`} className = {`h-100 text-reset text-decoration-none ${styles.card}`}>
         <Card.Body>
-            <Stack gap={2} className = "align-items-center justify-content-center h-100">
+            <Stack gap = {2} className = "align-items-center justify-content-center h-100">
                 <span className = "fs-5">{title}</span>
                 {tags.length > 0 && (
-                    <Stack gap={1} direction = "horizontal" className = "justify-content-center flex-wrap">
+                    <Stack gap = {1} direction = "horizontal" className = "justify-content-center flex-wrap">
                         {tags.map(tag => (
                             <Badge className = "text-truncate" key = {tag.id}>
                                 {tag.label}
