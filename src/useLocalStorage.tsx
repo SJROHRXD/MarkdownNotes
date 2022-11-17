@@ -34,6 +34,8 @@ export function useLocalStorage<T>
 // A custom hook is a function that starts with the word `use`
 // Custom hooks share logic between components
 
+
+// useLocalStorage 💧
 // useLocalStorage is a custom hook that allows us to store data in the browser's local storage
 // useLocalStorage takes two arguments, a key and an initial value
 // useLocalStorage returns an array with two items
