@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useMemo } from "react";
 import { Container } from "react-bootstrap";
+
+import { useMemo } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { v4 as uuidV4 } from "uuid";
 
@@ -8,11 +9,7 @@ import { useLocalStorage } from "./useLocalStorage";
 import { NewNote } from "./NewNote";
 import { NoteList } from "./NoteList";
 import { NoteLayout } from "./NoteLayout";
-import { Note } from "./Note"; 
-
-// types are used to define the shape of an object
-// type aliases are used to give a name to a type
-// exporting a type allows us to use it in other files
+import { Note } from "./Note";
 
 export type Note = {
   id: string;
@@ -53,7 +50,7 @@ function App() {
     setNotes(prevNotes => {
       return [
         ...prevNotes, 
-          {...data, id: uuidV4(), tagIds: tags.map(tag => tag.id) },
+          { ...data, id: uuidV4(), tagIds: tags.map(tag => tag.id) },
         ];
     });
   };
@@ -65,35 +62,64 @@ function App() {
   return (
     <Container className = "my-4"> 
       <Routes>
-        <Route path = "/" element = { <NoteList notes={notesWithTags} availableTags={tags} /> } />            
-        <Route 
+        
+        <Route
+          path = "/"
+          element = {
+          <NoteList 
+            notes = {notesWithTags}
+            availableTags = {tags}
+            />
+          }
+        />
+        
+        <Route
           path = "/new"
-          element = { 
+          element = {
             <NewNote 
-              onSubmit = {onCreateNote} 
-              onAddTag = {addTag} 
+              onSubmit = {onCreateNote}
+              onAddTag = {addTag}
               availableTags = {tags}
             />
           }
         />
-        <Route path = "/:id" element = {<NoteLayout notes={notesWithTags} />}>
+        
+        <Route path = "/:id" element = { <NoteLayout notes = {notesWithTags} /> }>
           <Route index element = { <Note /> } />
           <Route path = "edit" element = { <h1>Edit</h1> } />
         </Route>
-        <Route path = "*" element = { <Navigate to = "/" /> } />        
+        
+        <Route path = "*" element = { <Navigate to = "/" /> } />      
+        
       </Routes>
     </Container>
   );
 };
 
-// Container is a component that allows us to define a container
+// Routes 🚑
+// App returns routes for the NoteList, NewNote, and NoteLayout components
+
+// Route path = "/" is the default route, "/" is the default path
+
+// Route path = "/new" is the route for the NewNote component
+
+// Route path = "/:id" is a dynamic route
+  // Route index element = { <Note /> } is the default route
+  // Route path = "edit" element ... UPDATE!
+
+// Route path = "*" is a catch-all route
+
+// Types 🚓
+// Types are used to define the shape of an object
+// Type Aliases are used to give a name to a type
+
+// Components 🚗
 // Routes is a component that allows us to define a set of routes
-// Route is a component that allows us to define a single route
 // Navigate is a component that allows us to redirect to another route
+
+// Props 🚲
 // element is a prop that allows us to define the component that will be rendered when the route is matched
 // path is a prop that allows us to define the path that will be matched
 // index is a prop that allows us to define the route that will be matched when the path is empty
-// notesWithTags is a variable that is defined using useMemo
-
 
 export default App
