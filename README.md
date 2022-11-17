@@ -5,7 +5,7 @@
 </p>
 
 
-## Table of Contents
+## Table of Contents 🌺
 
 - [Description](#Description-)
 - [Installation](#Installation-)
@@ -14,21 +14,20 @@
 - [Licensing](#Licensing-)
 - [FUTURE](#FUTURE-)
 
-## Description 🍎
+## Description 
 
 From [Web Dev Simplified - YouTube](https://youtu.be/j898RGRw0b4) || [Web Dev Simplified - GitHub](https://github.com/WebDevSimplified) || [Web Dev Simplified](http://www.webdevsimplified.com/)
 
-` A Note-Taker w Markdown Support; Filter by Tag / Title `
+` A Note-Taker w Markdown Support; Filter by Tag / Title ` 🔜 *un-bundled, un-built*
 
-🔜 *un-bundled, un-built*
-
-## Installation 🍅
+## Installation 
 
     git clone https://github.com/SJROHRXD/MarkdownNotes.git
-    npm i
-    npm run dev
 
-## Usage 🍉
+    $ npm i
+    $ npm run dev
+
+## Usage 
 
 - navigate to hosted site
 - *Search* by Title or Tags
@@ -39,7 +38,7 @@ From [Web Dev Simplified - YouTube](https://youtu.be/j898RGRw0b4) || [Web Dev Si
 - *Edit* your Note or Tags
 - Tags can be emojis 🧷
 
-## Tech 🍓
+## Tech 
 
 [TypeScript](https://www.typescriptlang.org/docs/)
 
@@ -51,9 +50,9 @@ From [Web Dev Simplified - YouTube](https://youtu.be/j898RGRw0b4) || [Web Dev Si
 
 [Vite](https://vitejs.dev/guide/)
 
-// [✨Return to Top](#Table-of-Contents) //
+🍒 [Return to Top](#Table-of-Contents)
 
-## Licensing 🍒
+## Licensing 
 
 Refer to ✨ [this](https://github.com/WebDevSimplified/react-note-taking-app/blob/main/LICENSE) ✨ !
 
@@ -72,4 +71,4 @@ To Update:
 - [ ] Stylize
 - [ ] Modularize
 
-// [✨Return to Top](#Table-of-Contents) //
+🍒 [Return to Top](#Table-of-Contents)
