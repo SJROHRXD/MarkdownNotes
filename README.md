@@ -1,6 +1,5 @@
 # Markdown Notes 🌷 #
 
-
 ## Table of Contents
 
 - [Description](#Description-)
@@ -11,7 +10,6 @@
 - [FUTURE](#FUTURE-)
 
 ## Description 🍎
----
 
 From [Web Dev Simplified - YouTube](https://youtu.be/j898RGRw0b4) || [Web Dev Simplified - GitHub](https://github.com/WebDevSimplified) || [Web Dev Simplified](http://www.webdevsimplified.com/)
 
@@ -20,17 +18,14 @@ From [Web Dev Simplified - YouTube](https://youtu.be/j898RGRw0b4) || [Web Dev Si
 🔜 *un-bundled, un-built*
 
 ## Installation 🍅
----
 
     npm i
 
 ## Usage 🍉
----
 
     npm run dev
 
 ## Tech 🍓
----
 
 [TypeScript](https://www.typescriptlang.org/docs/)
 
@@ -42,15 +37,17 @@ From [Web Dev Simplified - YouTube](https://youtu.be/j898RGRw0b4) || [Web Dev Si
 
 [Vite](https://vitejs.dev/guide/)
 
+// [✨Return to Top](#Table-of-Contents-) //
+
 ## Licensing 🍒
----
 
 Refer to ✨ [this](https://github.com/WebDevSimplified/react-note-taking-app/blob/main/LICENSE) ✨ !
 
 >This README was generated with 🌼🌿🌷 and 🤍 by SJROHRXD
 
-## FUTURE 🚀
 ---
+
+## FUTURE 🚀
 
 To Update:
 1. Add ~ banner ~ or idk something for "Notes" header
@@ -59,3 +56,5 @@ To Update:
 4. Make note creation more intuitive
 5. Stylize
 6. Modularize
+
+// [✨Return to Top](#Table-of-Contents-) //
