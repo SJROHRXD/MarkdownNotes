@@ -1,7 +1,7 @@
 # Markdown Notes 🌷 #
 
-<img src="https://raw.githubusercontent.com/SJROHRXD/MarkdownNotes/master/public/assets/noteexamppp.png" width="300" >
-<img src="https://raw.githubusercontent.com/SJROHRXD/MarkdownNotes/master/public/assets/noteexamppp2.png" width="300" >
+<img src="https://raw.githubusercontent.com/SJROHRXD/MarkdownNotes/master/public/assets/noteexamppp.png" height="280" >
+<img src="https://raw.githubusercontent.com/SJROHRXD/MarkdownNotes/master/public/assets/noteexamppp2.png" height="280" >
 
 ## Table of Contents
 
