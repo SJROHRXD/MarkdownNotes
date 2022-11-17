@@ -1,4 +1,4 @@
-
+# Markdown Notes 🌷 #
 
 
 
@@ -8,4 +8,3 @@ To Update:
 3. Delete warning?
 4. Make Note creation more intuitive
 5. Pretty
-6. Fix New Note Body situation
