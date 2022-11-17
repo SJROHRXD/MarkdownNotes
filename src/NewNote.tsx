@@ -14,10 +14,10 @@ export function NewNote({ onSubmit, onAddTag, availableTags }: NewNoteProps) {
             <NoteForm 
             onSubmit = {onSubmit}
             onAddTag = {onAddTag}
-            availableTags = {availableTags} 
+            availableTags = {availableTags}
             />
         </>
-    )
+    );
 };
 
 // type NewNoteProps is a type alias for an object with a single property, onSubmit, which is a function that takes a NoteData object.
