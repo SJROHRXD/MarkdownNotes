@@ -120,6 +120,7 @@ function NoteCard({ id, title, tags }: SimplifiedNote) {
     </Card>
 };
 
+// Notes 📝
 // NoteCard is a function that takes in id, title, and tags as props and returns a NoteCard component
 // NoteCard is a child component of NoteList
 // *if there are tags, map through the tags and return a Badge component for each tag
