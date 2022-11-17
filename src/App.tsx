@@ -1,17 +1,14 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Container } from "react-bootstrap";
-
 import { useMemo } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { v4 as uuidV4 } from "uuid";
-
 import { useLocalStorage } from "./useLocalStorage";
-
 import { NewNote } from "./NewNote";
 import { NoteList } from "./NoteList";
 import { NoteLayout } from "./NoteLayout";
 import { Note } from "./Note";
 import { EditNote } from "./EditNote";
+import { Container } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export type Note = {
   id: string
