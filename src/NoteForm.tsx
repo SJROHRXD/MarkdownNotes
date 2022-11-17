@@ -1,9 +1,10 @@
 import { useState, FormEvent, useRef } from "react";
-import { Form, Stack, Col, Row, Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
+import { Form, Stack, Col, Row, Button } from "react-bootstrap";
 import CreatableReactSelect from "react-select/creatable";
-import { NoteData, Tag } from "./App";
 import { v4 as uuidV4 } from "uuid";
+
+import { NoteData, Tag } from "./App";
 
 type NoteFormProps = {
     onSubmit: (note: NoteData) => void;
@@ -99,3 +100,8 @@ export function NoteForm({ onSubmit, onAddTag, availableTags }: NoteFormProps) {
 
 // React Select 🪐
 // CreatableReactSelect is a component that renders a select control that allows users to create new options
+
+// onSubmit is a prop that is called when the form is submitted
+// handleSubmit is a function that is called when the form is submitted and calls onSubmit with the form data
+// useRef is a hook that returns a mutable ref object whose .current property is initialized to the passed argument (initialValue)
+// useState is a hook that returns a stateful value, and a function to update it
